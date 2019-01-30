@@ -20,7 +20,7 @@ public class AccountMapRepository implements AccountRepository {
 	public String createAccount(String jsonString) {
 
 		Account newAcc = json.getObjectForJSON(jsonString, Account.class);
-		Long id = (long)newAcc.getAccountNumber();
+		Long id = (long) newAcc.getAccountNumber();
 		account.put(id, newAcc);
 		return "Created new account with first name: " + newAcc.getFirstName() + ", Last name: " + newAcc.getLastName()
 				+ ", Account Number: " + newAcc.getAccountNumber();
@@ -29,7 +29,7 @@ public class AccountMapRepository implements AccountRepository {
 	public String deleteAccount(Long id) {
 
 		account.remove(id);
-		return "Removed account by the id: " +id;
+		return "Removed account by the id: " + id;
 	}
 
 	public String updateAccount(Long id, String account) {
@@ -41,8 +41,16 @@ public class AccountMapRepository implements AccountRepository {
 		return json.getJSONForObject(account.get(id));
 	}
 
-	 
-	
+	public int getCountByFirstNames(String firstName) {
+		int count = 0;
+		for(Map.Entry<Long, Account> AccEntry: account.entrySet()) {  
+			if(AccEntry.getValue().getFirstName().equals(firstName)) {
+				count +=1;
+			}
+		
+		}
+		return count;
+	}
+
+
 }
-
-
