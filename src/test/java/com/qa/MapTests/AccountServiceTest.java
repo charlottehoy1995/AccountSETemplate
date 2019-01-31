@@ -9,7 +9,6 @@ import org.junit.Test;
 
 import com.qa.persistence.repository.AccountMapRepository;
 
-
 public class AccountServiceTest {
 	
 	private  String MOCK_DATA_ARRAY_ONE = "{\"firstName\":\"John\",\"lastName\":\"Doe\",\"accountNumber\":1234}";
@@ -29,7 +28,7 @@ public class AccountServiceTest {
 		repo.createAccount(MOCK_DATA_ARRAY_ONE);
 		assertEquals(MOCK_DATA_ARRAY_ONE, repo.findAccount(1234L));
 	}
-	
+
 
 	@Test
 	public void add2AccountTest() {
