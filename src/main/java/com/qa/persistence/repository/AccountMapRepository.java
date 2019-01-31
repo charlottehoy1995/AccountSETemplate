@@ -33,7 +33,6 @@ public class AccountMapRepository implements AccountRepository {
 	}
 
 	public String updateAccount(Long id, String account) {
-
 		return null;
 	}
 
@@ -43,14 +42,13 @@ public class AccountMapRepository implements AccountRepository {
 
 	public int getCountByFirstNames(String firstName) {
 		int count = 0;
-		for(Map.Entry<Long, Account> AccEntry: account.entrySet()) {  
-			if(AccEntry.getValue().getFirstName().equals(firstName)) {
-				count +=1;
+		for (Map.Entry<Long, Account> AccEntry : account.entrySet()) {
+			if (AccEntry.getValue().getFirstName().equals(firstName)) {
+				count++;
 			}
-		
+
 		}
 		return count;
 	}
-
 
 }
