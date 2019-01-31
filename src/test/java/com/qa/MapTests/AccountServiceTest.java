@@ -15,7 +15,7 @@ public class AccountServiceTest {
 	private  String MOCK_DATA_ARRAY_TWO = "{\"firstName\":\"Charlotte\",\"lastName\":\"Hoy\",\"accountNumber\":1256}";
 	private  String MOCK_DATA_ARRAY_THREE = "{\"firstName\":\"Charlotte\",\"lastName\":\"Hoy\",\"accountNumber\":1286}";
 	
-	
+
 	private AccountMapRepository repo;
 
 	@Before
