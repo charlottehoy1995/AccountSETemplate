@@ -3,7 +3,6 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.qa</groupId>
 	<artifactId>AccountSETemplate</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
 	<properties>
@@ -203,4 +202,5 @@
 			</plugin>
   	</plugins>
 	</build>
+	<version>1</version>
 </project>
